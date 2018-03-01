@@ -15,6 +15,9 @@ var UI = function(map){
 
   this.restaurants = new Restaurants();
 
+  var italianButton = document.querySelector("#italian-button");
+  italianButton.onclick = this.handleItalianButton.bind(this);
+
   this.restaurants.allAPI(function(result){
     this.renderRestaurantsList(result);
   }.bind(this));
