@@ -4,8 +4,8 @@ var restaurantRouter = express.Router();
 
 var Restaurant = require('../client/src/models/restaurant');
 var restaurants = require("../client/src/models/restaurants");
-//var AnimalQuery = require("../client/db/animalQuery.js");
-//var query = new AnimalQuery();
+var RestaurantQuery = require("../client/db/restaurantQuery.js");
+var query = new RestaurantQuery();
 
 // API index
 restaurantRouter.get('/restaurants/api', function(req, res) {

@@ -3,6 +3,7 @@ use restaurants_db;
 db.restaurants.insert([
 {
 	name: "Amarone",
+	coords: [55.9537467,-3.1944039],
 	telephone: "0131 523 1171",
 	opening: [ "Mon–Fri 8am–10pm", "Sat/Sun 10am–10pm" ],
 	pre_theatre: {
@@ -10,10 +11,11 @@ db.restaurants.insert([
 		price: "£15.95 (£18.95 three courses)",
 	}
 	email: "info@amaronerestaurant.co.uk",
-	Website: "www.amaronerestaurant.co.uk"
+	Website: "www.amaronerestaurant.co.uk",
 },
 {
 	name: "Voodoo Rooms",
+	coords: [55.9538144,-3.1928817],
 	telephone: "0131 556 7060",
 	opening: ["Mon–Thu 4pm–1am", "Fri–Sun noon–1am"]
 	pre_theatre: { 
@@ -25,6 +27,7 @@ db.restaurants.insert([
 },
 {
 	name: "The Dome"
+	coords: [55.9535647,-3.1978135],
 	telephone: "0131 624 8624",
 	opening: ["Mon–Fri 8am–10pm", "Sat/Sun 10am–10pm"]
 	pre_theatre: { 

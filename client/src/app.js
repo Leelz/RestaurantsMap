@@ -10,7 +10,7 @@ var app = function() {
   //creates the map
   mapDiv = document.querySelector("#mapDiv");
   var centre = {lat: 56, lng: -3 };
-  this.map = new MapWrapper(centre, 3);
+  this.map = new MapWrapper(centre, 13);
   this.map.geoLocate();
 
   var ui = new UI(this.map);  

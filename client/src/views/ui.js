@@ -4,14 +4,14 @@ var MapWrapper = require("../models/mapWrapper.js");
 
 var UI = function(map){ 
   // document.innerHTML = ""
-  var goButton = document.querySelector("#go-button");
-  goButton.onclick = this.handleGoButton.bind(this);
+  //var goButton = document.querySelector("#go-button");
+  //goButton.onclick = this.handleGoButton.bind(this);
 
   // var africaSound = document.querySelector("#savannah")
   // africaSound.play();
 
-  var resetButton = document.querySelector("#reset-button");
-  resetButton.onclick = this.handleResetButton.bind(this);
+  //var resetButton = document.querySelector("#reset-button");
+  //resetButton.onclick = this.handleResetButton.bind(this);
 
   this.restaurants = new Restaurants();
 
