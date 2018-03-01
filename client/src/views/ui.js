@@ -13,14 +13,10 @@ var UI = function(map){
   //var resetButton = document.querySelector("#reset-button");
   //resetButton.onclick = this.handleResetButton.bind(this);
 
-  this.restaurants = new Restaurants();
+  //this.restaurants = new Restaurants();
 
   var italianButton = document.querySelector("#italian-button");
   italianButton.onclick = this.handleItalianButton.bind(this);
-
-  this.restaurants.allAPI(function(result){
-    this.renderRestaurantsList(result);
-  }.bind(this));
 
 
   UI.prototype = {
@@ -49,6 +45,16 @@ var UI = function(map){
       });
         }
       })
+    },
+
+    showRestaurants: function(){
+      for (var restaurant of Restaurants){
+        if restaurant.style === checkbox.value) {
+          show(restaurant)
+        } else{
+          hide(restaurant)
+        }
+      }
     }
   }
 }
