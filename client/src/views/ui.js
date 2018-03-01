@@ -46,24 +46,6 @@ var UI = function(map){
       });
         }
       })
-    },
-
-    renderRestaurantsList: function(restaurantsAPI){
-      var restaurantsSelect = document.querySelector("#selector");
-      restaurantsSelect.innerHTML = ""
-
-      var unselectable = document.createElement("option");
-      unselectable.innerText = "Country:"
-      unselectable.disabled = true;
-      unselectable.selected = true;
-      restaurantsSelect.appendChild(unselectable);
-
-      for (var restaurant of restaurantsAPI){
-        var restaurantChoice = document.createElement("option");
-        restaurantChoice.innerText = restaurant.name;
-        restaurantChoice.value = JSON.stringify(restaurant);
-        restaurantsSelect.appendChild(restaurantChoice);
-      }
     }
   }
 }
