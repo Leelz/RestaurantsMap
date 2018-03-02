@@ -1,9 +1,9 @@
 var MapWrapper = function(coords, zoom) {
   var container = document.querySelector("#mapDiv");
-    this.googleMap = new google.maps.Map(container, {
+  this.googleMap = new google.maps.Map(container, {
     center: coords,
     zoom: zoom
-    });
+  });
 }
 
 MapWrapper.prototype = {
@@ -11,7 +11,6 @@ MapWrapper.prototype = {
     var marker = new google.maps.Marker({
       position: coords,
       map: this.googleMap,
-      animation: google.maps.Animation.DROP
     });
     console.log("marker added");
     return marker;
@@ -19,9 +18,9 @@ MapWrapper.prototype = {
 
   addInfoWindow: function(map, marker, contentString){
     var infoWindow = new google.maps.InfoWindow({
-          content: contentString,
-        });
-      marker.addListener("click", function(){
+      content: contentString,
+    });
+    marker.addListener("click", function(){
       infoWindow.open(this.googleMap, marker);
     })
   },
@@ -33,11 +32,10 @@ MapWrapper.prototype = {
       var marker = this.addMarker(centre);
 
       var infoWindow = new google.maps.InfoWindow({
-            content: "<h2>Home</h2>",
-          });
+        content: "<h2>Home</h2>",
+      });
 
 
-      // var infoWindow = this.addInfoWindow(this.googleMap, marker, "<h2>Home</h2>");
       infoWindow.open(this.googleMap, marker);
     }.bind(this));
   }

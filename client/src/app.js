@@ -13,7 +13,7 @@ var app = function() {
   this.map = new MapWrapper(centre, 13);
   this.map.geoLocate();
 
-  var ui = new UI(this.map);  
+var ui = new UI(this.map);  
 }
 
 window.onload = app;

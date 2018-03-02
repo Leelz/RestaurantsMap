@@ -18,6 +18,10 @@ var UI = function(map){
   var italianButton = document.querySelector("#italian-button");
   italianButton.onclick = this.handleItalianButton.bind(this);
 
+  this.restaurants.allAPI(function(result){
+    this.addRestaurantMarkers(result);
+  }.bind(this));
+
 
   UI.prototype = {
     addHereToDB: function(){
@@ -45,20 +49,17 @@ var UI = function(map){
       });
         }
       })
-    }
-/*
-    showRestaurant()
-
-    boxCheck: function(){
-      for (var restaurant of Restaurants){
-        if restaurant.style === checkbox.value) {
-          show(restaurant)
-        } else{
-          hide(restaurant)
-        }
+    },
+    addRestaurantMarkers = function(restaurantsAPI) {
+      var restCoords = [];
+      for (var restaurant of restaurantsAPI){
+        console.log(restaurant.coords)
+        /*restCoords.push({lat: restaurant.coords[0], lng: restaurant.coords[1]});
+      }
+        console.log(restCoords)
+        map.addMarker(restCoords) */
       }
     }
-    */
   }
 }
 
