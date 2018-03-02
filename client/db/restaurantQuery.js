@@ -38,8 +38,8 @@ RestaurantQuery.prototype = {
     });
   },
 
-  deleteVisitedAnimals: function(){
-    console.log("HIT DELETE VISITED ANIMALS")
+  deleteVisitedRestaurants: function(){
+    console.log("HIT DELETE VISITED RESTAURANTS")
     MongoClient.connect(this.url, function(err, db){
       if (err){
         console.log("error returned", err);
@@ -55,4 +55,4 @@ RestaurantQuery.prototype = {
 };
 
 
-module.exports = AnimalQuery;
+module.exports = RestaurantQuery;

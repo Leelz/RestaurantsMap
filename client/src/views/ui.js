@@ -45,9 +45,11 @@ var UI = function(map){
       });
         }
       })
-    },
+    }
+/*
+    showRestaurant()
 
-    showRestaurants: function(){
+    boxCheck: function(){
       for (var restaurant of Restaurants){
         if restaurant.style === checkbox.value) {
           show(restaurant)
@@ -56,6 +58,7 @@ var UI = function(map){
         }
       }
     }
+    */
   }
 }
 
