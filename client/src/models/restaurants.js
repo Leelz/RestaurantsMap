@@ -46,10 +46,22 @@ Restaurants.prototype = {
       if(this.status !== 200) 
         return;
       var jsonString = this.responseText;
+      console.log(jsonString)
       var results = JSON.parse(jsonString);
+      var restaurantsAPI = self.populateDropDownList(results);
       callback(restaurantsAPI);
     })
   },
+
+  populateDropDownList: function(results){
+    var restaurants = [];
+    for (var result of results){
+      var restaurant = new Restaurant (result);
+    restaurants.push(restaurant);
+    }
+    console.log(restaurants)
+    return Restaurants;
+  }
 
 }
 

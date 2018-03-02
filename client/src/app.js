@@ -1,8 +1,5 @@
 var UI = require("./views/ui");
-var Restaurants = require("./models/restaurants.js");
 var MapWrapper = require("./models/mapWrapper.js");
-
-var restaurant = null;
 
 var app = function() {
 
@@ -13,7 +10,7 @@ var app = function() {
   this.map = new MapWrapper(centre, 13);
   this.map.geoLocate();
 
-var ui = new UI(this.map);  
+var ui = new UI(this.map);
 }
 
 window.onload = app;

@@ -1,11 +1,7 @@
 var Restaurant = function(options){
   this.name = options.name;
   this.coords = options.coords;
-  this.opening = options.opening;
-  this.telephone = options.telephone;
-  this.pre_theatre = options.pre_theatre;
-  this.email = options.email;
-  this.website = options.website;
+
 }
 
 Restaurant.prototype = {
@@ -16,3 +12,11 @@ Restaurant.prototype = {
 
 
 module.exports = Restaurant;
+
+/*
+  this.opening = options.opening;
+  this.telephone = options.telephone;
+  this.pre_theatre = options.pre_theatre;
+  this.email = options.email;
+  this.website = options.website;
+  */

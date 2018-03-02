@@ -1,18 +1,8 @@
 {
-  "name": "google_maps_filter",
+  "name": "googlemapsfilter",
   "version": "1.0.0",
   "description": "",
-  "main": "server.js",
-  "dependencies": {
-    "body-parser": "^1.18.2",
-    "express": "^4.16.2",
-    "lodash": "^4.17.5",
-    "mongodb": "^3.0.3",
-    "webpack": "^2.2.1"
-  },
-  "devDependencies": {
-    "webpack": "^2.2.1"
-  },
+  "main": "restaurantsAPI.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "node server.js"
@@ -26,5 +16,15 @@
   "bugs": {
     "url": "https://github.com/Leelz/RestaurantsMap/issues"
   },
-  "homepage": "https://github.com/Leelz/RestaurantsMap#readme"
+  "homepage": "https://github.com/Leelz/RestaurantsMap#readme",
+  "dependencies": {
+    "body-parser": "^1.17.1",
+    "express": "^4.16.2",
+    "mongodb": "^2.2.22",
+    "webpack": "^2.2.1"
+  },
+  "devDependencies": {
+    "babel-cli": "^6.26.0",
+    "babel-preset-env": "^1.6.1"
+  }
 }

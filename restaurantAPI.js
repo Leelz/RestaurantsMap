@@ -3,13 +3,30 @@ use restaurants_db;
 db.restaurants.insert([
 {
 	name: "Amarone",
-	coords: [55.9537467,-3.1944039],
+	coords: [55.9537467, -3.1944039],
+},
+{
+	name: "Voodoo Rooms",
+	coords: [55.9538144,-3.1928817],
+},
+{
+	name: "The Dome"
+	coords: [55.9535647,-3.1978135],
+},
+
+]);
+
+/*
+db.restaurants.insert([
+{
+	name: "Amarone",
+	coords: [55.9537467, -3.1944039],
 	telephone: "0131 523 1171",
 	opening: [ "Mon–Fri 8am–10pm", "Sat/Sun 10am–10pm" ],
 	pre_theatre: {
 		info: "Sun–Fri noon–6.30pm, Sat noon–3pm",
 		price: "£15.95 (£18.95 three courses)",
-	}
+	},
 	email: "info@amaronerestaurant.co.uk",
 	Website: "www.amaronerestaurant.co.uk",
 },
@@ -37,6 +54,7 @@ db.restaurants.insert([
 	email: "info@amaronerestaurant.co.uk",
 	Website: "www.amaronerestaurant.co.uk"
 },
-]);
 
+]);
+*/
 

@@ -14,6 +14,13 @@ restaurantRouter.get('/restaurants/api', function(req, res) {
   })
 });
 
+// index
+restaurantRouter.get('/restaurants', function(req, res) {
+  query.allVisited(function(results){
+    res.json(results);
+  })
+});
+
 
 //--------may not need to use the following functions:
 
