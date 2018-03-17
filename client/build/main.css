@@ -1,26 +1,68 @@
-#mapDiv {
-  height:500px;
-  width:500px;
+body{
+  background-color: #B9D094
 }
 
-input.chk-btn {
-  display: none;
+h1{
+  font-family: Afrika T Ubuntu;
+  text-align: center;
+  font-size: 43px;
+  color: #06436A;
+  margin: 0px;
 }
-input.chk-btn + label {
-  border: 1px solid grey;
-  background: ghoswhite;
-  padding: 5px 8px;
-  cursor: pointer;
+
+p{
+  font-family: futura;
+  font-size: 18px;
+  color: #06436A;
+  text-align: center;
+}
+
+button{
+  height: 25px;
+  font-family: Afrika T Ubuntu;
+  font-size: 15px;
+  border: 0;
   border-radius: 5px;
- 
+  background-color: #4B6174;
+  color: #B9D094;
 }
-input.chk-btn:not(:checked) + label:hover {
-  box-shadow: 0px 1px 3px;
-  
+
+#header{
+  height: 50px;
+  display: flex;
+  flex-direction: row;
+  align-content: flex-end;
+  align-items: flex-start;
+  justify-content: space-between;
+  padding: 5px;
 }
-input.chk-btn + label:active,
-input.chk-btn:checked + label {
-  box-shadow: 0px 0px 3px inset;
-  background: #8cc472;
-  
+
+#main-container{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+#lhs{
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  width: 650px;
+  padding-top: 5px;
+}
+
+#mapDiv{
+  border: solid 1px white;
+  border-radius: 3px;
+  height: 280px;
+  margin: 2px;
+  transition: all .4s ease-in-out;
+}
+
+#restaurant_info{
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  width: 650px;
+  height: 200px;
 }

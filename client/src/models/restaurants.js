@@ -29,37 +29,24 @@ Restaurants.prototype = {
     request.send();
   },
 
-  allVisited: function(callback){
-  var self = this;
-    this.makeRequest("http://localhost:3000/restaurants", function() {
-      if (this.status !== 200)
-        return;      
-      var jsonString = this.responseText;
-      var result = JSON.parse(jsonString);
-      callback(result);
-    });
-  }, 
-
   allAPI: function(callback){
     var self = this;
     this.makeRequest("http://localhost:3000/restaurants/api", function(){
       if(this.status !== 200) 
         return;
       var jsonString = this.responseText;
-      console.log(jsonString)
       var results = JSON.parse(jsonString);
-      var restaurantsAPI = self.populateDropDownList(results);
-      callback(restaurantsAPI);
+      //var restaurantsAPI = self.populateDropDownList(results);
+      callback(results);
     })
   },
 
   populateDropDownList: function(results){
-    var restaurants = [];
+    var Restaurants = [];
     for (var result of results){
       var restaurant = new Restaurant (result);
-    restaurants.push(restaurant);
+    Restaurants.push(restaurant);
     }
-    console.log(restaurants)
     return Restaurants;
   }
 
