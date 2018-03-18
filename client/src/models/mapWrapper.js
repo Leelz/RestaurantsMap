@@ -24,12 +24,23 @@ MapWrapper.prototype = {
   },
 
   addInfoWindow: function(map, marker, contentString){
+    currWindow = false;
     var infoWindow = new google.maps.InfoWindow({
           content: contentString,
         });
-      marker.addListener("click", function(){
-      infoWindow.open(this.googleMap, marker);
-    })
+
+      google.maps.event.addListener(marker, "click", function(){
+        
+        
+        if( currWindow ) {
+         currWindow.close();
+       }
+
+       currWindow = infoWindow;
+       infoWindow.open(map, marker);
+     });
+
+
   },
 
   addMarkerListener: function(){
